@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Social Media Content Analyzer</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css" />
+	<meta name="description" content="Analyze text from PDFs and images, then get engagement suggestions." />
+	<meta name="robots" content="noindex" />
+</head>
+<body>
+	<header class="app-header">
+		<h1>Social Media Content Analyzer</h1>
+		<p>Upload a PDF or image. We’ll extract text and suggest engagement improvements.</p>
+	</header>
+
+	<main class="container">
+		<section class="uploader">
+			<div id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="File drop area">
+				<div class="dropzone-inner">
+					<div class="icon" aria-hidden="true">⬆️</div>
+					<p class="dz-title">Drag & drop PDF or image here</p>
+					<p class="dz-subtitle">or</p>
+					<button id="fileButton" class="button">Choose file</button>
+					<input id="fileInput" type="file" accept=".pdf,image/*" hidden />
+				</div>
+			</div>
+			<p class="hint">Supported: PDF, PNG, JPG. All processing is done in your browser.</p>
+		</section>
+
+		<section id="status" class="status" aria-live="polite"></section>
+
+		<section class="results">
+			<div class="result-columns">
+				<div class="card">
+					<h2>Extracted Text</h2>
+					<textarea id="extractedText" class="mono" placeholder="Your extracted text will appear here..." rows="14"></textarea>
+				</div>
+				<div class="card">
+					<h2>Engagement Suggestions</h2>
+					<ul id="suggestions" class="suggestions-list"></ul>
+					<div class="actions">
+						<button id="analyzeBtn" class="button secondary">Re-analyze text</button>
+						<button id="copyTextBtn" class="button">Copy text</button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="app-footer">
+		<span>Built for the Software Engineer Technical Assessment</span>
+		<a href="https://github.com/" target="_blank" rel="noreferrer">Source</a>
+	</footer>
+
+	<!-- pdf.js (text extraction) -->
+	<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.js"></script>
+	<!-- Tesseract.js (OCR for images) -->
+	<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+	<script src="./src/analyzer.js"></script>
+	<script src="./src/ui.js"></script>
+	<script src="./src/app.js"></script>
+</body>
+</html>
+
+

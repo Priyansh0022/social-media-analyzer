@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: social-media-analyzer-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+

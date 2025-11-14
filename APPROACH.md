@@ -1,0 +1,7 @@
+# Technical Approach: Social Media Content Analyzer
+
+I built a two-tier solution that keeps the React interface responsive while delegating heavy parsing work to an Express API. The frontend focuses on clarity and accessibility: drag-and-drop uploads, explicit loading states, and modular components that surface the most relevant metrics (word count, sentiment, hashtags, CTAs, engagement score) alongside tailored suggestions. Files post to the backend via `FormData`, keeping the browser free from large parsing bundles and enabling consistent results regardless of device.
+
+On the server, Multer streams uploads into isolated temporary paths with validation and size caps. PDFs flow through `pdf-parse`, while images invoke a Tesseract worker that loads the bundled English `eng.traineddata` locally, avoiding brittle CDN fetches. Extracted text passes through normalization, stop-word filtering, sentiment heuristics, and scoring logic tuned for social media content. The worker lifecycle guarantees resources release after each job.
+
+Cross-cutting concerns include CORS configuration, structured error handling that returns user-friendly messages, and cleanup of temporary files. The codebase remains extensible: adding languages, richer NLP, or persistent storage would only touch well-scoped modules. Overall the implementation meets the assessment brief within the time budget while leaving a maintainable foundation for future growth.
