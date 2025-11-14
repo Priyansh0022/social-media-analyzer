@@ -14,9 +14,9 @@
   --text-primary: #eef3ff;
   --text-secondary: #c6d1ff;
   --muted: rgba(148, 163, 184, 0.32);
-  --shadow: 0 45px 90px -45px rgba(255, 113, 184, 0.55), 0 25px 65px -45px rgba(69, 244, 255, 0.45);
+  --shadow: 0 45px 90px -45px rgba(0, 123, 255, 0.55), 0 25px 65px -45px rgba(40, 167, 69, 0.45);
   --glass-blur: saturate(210%) blur(26px);
-  --glow: 0 0 35px rgba(255, 113, 184, 0.45);
+  --glow: 0 0 35px rgba(0, 123, 255, 0.45);
   --grid-line: rgba(255, 255, 255, 0.08);
 }
 
@@ -40,8 +40,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at top right, rgba(255, 113, 184, 0.2), transparent 45%),
-    radial-gradient(circle at bottom left, rgba(69, 244, 255, 0.18), transparent 45%);
+    radial-gradient(circle at top right, rgba(0, 123, 255, 0.2), transparent 45%),
+    radial-gradient(circle at bottom left, rgba(40, 167, 69, 0.18), transparent 45%);
   pointer-events: none;
   mix-blend-mode: screen;
   animation: ambientDrift 18s ease-in-out infinite alternate;
@@ -80,7 +80,7 @@ header::after {
   content: '';
   position: absolute;
   inset: -70px -140px 40px;
-  background: conic-gradient(from 220deg, rgba(255, 113, 184, 0.28), rgba(69, 244, 255, 0.18), transparent 65%);
+  background: conic-gradient(from 220deg, rgba(0, 123, 255, 0.28), rgba(40, 167, 69, 0.18), transparent 65%);
   filter: blur(70px);
   opacity: 0.85;
   z-index: -1;
@@ -95,7 +95,7 @@ header h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   letter-spacing: -0.02em;
-  filter: drop-shadow(0 14px 40px rgba(255, 113, 184, 0.45));
+  filter: drop-shadow(0 14px 40px rgba(0, 123, 255, 0.45));
 }
 
 header p {
@@ -127,8 +127,8 @@ footer::before {
   width: 120px;
   height: 2px;
   transform: translateX(-50%);
-  background: linear-gradient(90deg, transparent, rgba(255, 113, 184, 0.6), transparent);
-  box-shadow: 0 0 20px rgba(255, 113, 184, 0.35);
+  background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.6), transparent);
+  box-shadow: 0 0 20px rgba(0, 123, 255, 0.35);
 }
 
 /* Upload Container */
@@ -148,7 +148,7 @@ footer::before {
   content: '';
   position: absolute;
   inset: -25% -30%;
-  background: conic-gradient(from 120deg, rgba(255, 113, 184, 0.18), rgba(69, 244, 255, 0.15), transparent 65%);
+  background: conic-gradient(from 120deg, rgba(0, 123, 255, 0.18), rgba(40, 167, 69, 0.15), transparent 65%);
   animation: aurora 14s ease-in-out infinite alternate;
   opacity: 0.9;
   z-index: 0;
@@ -157,7 +157,7 @@ footer::before {
 
 .drop-zone {
   display: block;
-  border: 2px dashed rgba(255, 113, 184, 0.4);
+  border: 2px dashed rgba(0, 123, 255, 0.4);
   border-radius: 24px;
   padding: 3.6rem 2.6rem;
   text-align: center;
@@ -172,10 +172,10 @@ footer::before {
 
 .drop-zone:hover,
 .drop-zone.drag-over {
-  border-color: rgba(255, 113, 184, 0.85);
-  background: rgba(255, 113, 184, 0.12);
+  border-color: rgba(0, 123, 255, 0.85);
+  background: rgba(0, 123, 255, 0.12);
   transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 28px 60px -25px rgba(255, 113, 184, 0.55);
+  box-shadow: 0 28px 60px -25px rgba(0, 123, 255, 0.55);
 }
 
 .drop-zone::before {
@@ -183,9 +183,9 @@ footer::before {
   position: absolute;
   inset: -40%;
   background:
-    radial-gradient(circle at 15% 15%, rgba(255, 113, 184, 0.28), transparent 65%),
-    radial-gradient(circle at 80% 20%, rgba(69, 244, 255, 0.25), transparent 60%),
-    radial-gradient(circle at 50% 80%, rgba(148, 123, 255, 0.2), transparent 60%);
+    radial-gradient(circle at 15% 15%, rgba(0, 123, 255, 0.28), transparent 65%),
+    radial-gradient(circle at 80% 20%, rgba(40, 167, 69, 0.25), transparent 60%),
+    radial-gradient(circle at 50% 80%, rgba(255, 193, 7, 0.2), transparent 60%);
   opacity: 0;
   transition: opacity 0.45s ease;
 }
@@ -205,7 +205,7 @@ footer::before {
   font-size: clamp(3rem, 2.6rem + 1vw, 3.5rem);
   margin-bottom: 1.2rem;
   opacity: 0.95;
-  filter: drop-shadow(0 0 20px rgba(69, 244, 255, 0.45));
+  filter: drop-shadow(0 0 20px rgba(40, 167, 69, 0.45));
 }
 
 .drop-text {
@@ -249,15 +249,15 @@ footer::before {
 }
 
 .selected-file {
-  background: rgba(255, 113, 184, 0.2);
+  background: rgba(0, 123, 255, 0.2);
   color: var(--text-primary);
   padding: 0.5rem 1rem;
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 500;
-  border: 1px solid rgba(255, 113, 184, 0.45);
+  border: 1px solid rgba(0, 123, 255, 0.45);
   backdrop-filter: var(--glass-blur);
-  box-shadow: inset 0 0 12px rgba(255, 113, 184, 0.25), 0 0 22px rgba(255, 113, 184, 0.2);
+  box-shadow: inset 0 0 12px rgba(0, 123, 255, 0.25), 0 0 22px rgba(0, 123, 255, 0.2);
 }
 
 /* Action Buttons */
@@ -283,14 +283,14 @@ footer::before {
 .upload-btn {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  box-shadow: 0 15px 35px -15px rgba(255, 113, 184, 0.55);
+  box-shadow: 0 15px 35px -15px rgba(0, 123, 255, 0.55);
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
 
 .upload-btn:hover:not(:disabled) {
   transform: translateY(-3px);
-  box-shadow: 0 22px 55px -18px rgba(69, 244, 255, 0.55);
+  box-shadow: 0 22px 55px -18px rgba(40, 167, 69, 0.55);
 }
 
 .upload-btn:disabled {
@@ -320,7 +320,7 @@ footer::before {
   padding: 2rem;
   background: rgba(10, 14, 45, 0.58);
   border-radius: 18px;
-  border: 1px solid rgba(69, 244, 255, 0.35);
+  border: 1px solid rgba(40, 167, 69, 0.35);
   backdrop-filter: var(--glass-blur);
   position: relative;
   overflow: hidden;
@@ -330,7 +330,7 @@ footer::before {
   content: '';
   position: absolute;
   inset: -20%;
-  background: radial-gradient(circle, rgba(69, 244, 255, 0.22), transparent 70%);
+  background: radial-gradient(circle, rgba(40, 167, 69, 0.22), transparent 70%);
   opacity: 0.7;
 }
 
@@ -342,7 +342,7 @@ footer::before {
   border-radius: 50%;
   animation: spin 0.9s linear infinite;
   margin: 0 auto 1rem;
-  box-shadow: 0 0 25px rgba(69, 244, 255, 0.35);
+  box-shadow: 0 0 25px rgba(40, 167, 69, 0.35);
 }
 
 @keyframes spin {
@@ -366,7 +366,7 @@ footer::before {
   margin: 1.2rem 0;
   text-align: center;
   font-weight: 600;
-  box-shadow: inset 0 0 18px rgba(248, 139, 148, 0.18), var(--glow);
+  box-shadow: inset 0 0 18px rgba(248, 139, 148, 0.18), 0 0 35px rgba(0, 123, 255, 0.45);
   backdrop-filter: var(--glass-blur);
 }
 
@@ -387,8 +387,8 @@ footer::before {
   position: absolute;
   inset: -30% -35%;
   background:
-    radial-gradient(circle at top right, rgba(255, 113, 184, 0.12), transparent 65%),
-    radial-gradient(circle at 18% 75%, rgba(69, 244, 255, 0.16), transparent 55%);
+    radial-gradient(circle at top right, rgba(0, 123, 255, 0.12), transparent 65%),
+    radial-gradient(circle at 18% 75%, rgba(40, 167, 69, 0.16), transparent 55%);
   opacity: 0.9;
   pointer-events: none;
 }
@@ -414,7 +414,7 @@ footer::before {
 
 .metric-card {
   background: rgba(14, 23, 42, 0.72);
-  border: 1px solid rgba(69, 244, 255, 0.24);
+  border: 1px solid rgba(40, 167, 69, 0.24);
   border-radius: 22px;
   padding: 1.9rem;
   text-align: center;
@@ -429,16 +429,16 @@ footer::before {
   position: absolute;
   inset: -40%;
   background:
-    radial-gradient(circle at 50% 0%, rgba(255, 113, 184, 0.18), transparent 65%),
-    radial-gradient(circle at 15% 85%, rgba(69, 244, 255, 0.18), transparent 60%);
+    radial-gradient(circle at 50% 0%, rgba(0, 123, 255, 0.18), transparent 65%),
+    radial-gradient(circle at 15% 85%, rgba(40, 167, 69, 0.18), transparent 60%);
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
 .metric-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 24px 55px -25px rgba(255, 113, 184, 0.55);
-  border-color: rgba(255, 113, 184, 0.45);
+  box-shadow: 0 24px 55px -25px rgba(0, 123, 255, 0.55);
+  border-color: rgba(0, 123, 255, 0.45);
 }
 
 .metric-card:hover::before {
@@ -459,7 +459,7 @@ footer::before {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.35rem;
-  text-shadow: 0 0 30px rgba(255, 113, 184, 0.45);
+  text-shadow: 0 0 30px rgba(0, 123, 255, 0.45);
 }
 
 .metric-label {
@@ -490,7 +490,7 @@ footer::before {
   margin: 0 0 1rem 0;
   color: var(--text-primary);
   font-size: 1.25rem;
-  border-bottom: 1px solid rgba(69, 244, 255, 0.35);
+  border-bottom: 1px solid rgba(40, 167, 69, 0.35);
   padding-bottom: 0.8rem;
   display: inline-block;
   text-transform: uppercase;
@@ -507,13 +507,13 @@ footer::before {
 
 .keyword-tag,
 .cta-tag {
-  background: linear-gradient(135deg, rgba(255, 113, 184, 0.85), rgba(69, 244, 255, 0.75));
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.85), rgba(40, 167, 69, 0.75));
   color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
-  box-shadow: 0 10px 22px -12px rgba(255, 113, 184, 0.6);
+  box-shadow: 0 10px 22px -12px rgba(0, 123, 255, 0.6);
   letter-spacing: 0.04em;
 }
 
@@ -525,11 +525,11 @@ footer::before {
 /* Suggestions List */
 .suggestions-list {
   background: rgba(18, 32, 72, 0.55);
-  border: 1px solid rgba(69, 244, 255, 0.25);
+  border: 1px solid rgba(40, 167, 69, 0.25);
   border-radius: 20px;
   padding: 1.5rem 1.6rem;
   backdrop-filter: var(--glass-blur);
-  box-shadow: 0 16px 40px -25px rgba(69, 244, 255, 0.5);
+  box-shadow: 0 16px 40px -25px rgba(40, 167, 69, 0.5);
 }
 
 .suggestions-list li {
@@ -553,13 +553,13 @@ footer::before {
   height: 6px;
   border-radius: 50%;
   background: var(--secondary-color);
-  box-shadow: 0 0 14px rgba(69, 244, 255, 0.6);
+  box-shadow: 0 0 14px rgba(40, 167, 69, 0.6);
 }
 
 /* Text Preview */
 .text-preview {
   background: rgba(15, 23, 42, 0.68);
-  border: 1px solid rgba(69, 244, 255, 0.2);
+  border: 1px solid rgba(40, 167, 69, 0.2);
   border-radius: 20px;
   padding: 1.4rem;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
@@ -570,7 +570,7 @@ footer::before {
   white-space: pre-wrap;
   color: var(--text-primary);
   backdrop-filter: var(--glass-blur);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 0 30px -20px rgba(69, 244, 255, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04), 0 0 30px -20px rgba(40, 167, 69, 0.4);
 }
 
 /* Responsive Design */
