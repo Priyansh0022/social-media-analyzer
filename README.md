@@ -4,7 +4,7 @@ A modern web application that analyzes social media content by extracting text f
 
 ## 🌐 Live Project
 
-Frontend (Vercel): https://frontend-eygumuxut-keya-patels-projects.vercel.app  
+Frontend (Vercel): [Deployed on Vercel]  
 Backend: Runs locally (Render is chargeable; instructions below)
 
 ## 🚀 Features

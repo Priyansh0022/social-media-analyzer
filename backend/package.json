@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "social-media-analyzer-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend API for social media content analysis",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
